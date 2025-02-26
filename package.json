@@ -1,0 +1,49 @@
+{
+    "name": "imagic-tools",
+    "version": "0.9.0",
+    "description": "A simple classroom screen tool.",
+    "main": "src/main/main.js",
+    "scripts": {
+        "run": "electron .",
+        "build": "electron-builder"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GPUawa/imagic-tools.git"
+    },
+    "author": "GPUawa",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/GPUawa/imagic-tools/issues"
+    },
+    "homepage": "https://github.com/GPUawa/imagic-tools#readme",
+    "build": {
+        "appId": "gpuawa.imagic-tools",
+        "productName": "iMagicTools",
+        "asar": false,
+        "directories": {
+            "output": "dist"
+        },
+        "win": {
+            "icon": "src/assets/img/logo.ico"
+        }
+    },
+    "files": [
+        "**/*",
+        "!node_modules/**/*"
+    ],
+    "mac": {
+        "target": "dmg"
+    },
+    "win": {
+        "target": "nsis"
+    },
+    "linux": {
+        "target": "AppImage"
+    },
+    "devDependencies": {
+        "electron": "^34.2.0",
+        "electron-builder": "^25.1.8"
+    },
+    "dependencies": {}
+}
